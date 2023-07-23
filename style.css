@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Inter:wght@500;700;800&family=Teko:wght@500&display=swap');
+
+:root {
+    --bg: #251F20;
+    --card-bg: linear-gradient(143deg, #E68E7B 0%, #E68E7B 50%, #D47A66 100%);
+    --button-bg: #E68E7B;
+    --input-bg: #342F30;
+    --white-text: #FFF;
+    --gray-text: #A1A1AA;
+    --border: #DBB5AD;
+    --backcard-color: #A45A49;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg);
+    color: var(--white-text);
+    padding: 17px 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#mainContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#mainContainer #titleSection {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 48px;
+}
+
+#mainContainer #titleSection .textTitle h1 {
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 106%;
+}
+
+#mainContainer #titleSection .textTitle p {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--gray-text);
+}
+
+#mainContainer #titleSection .imgTitle {
+    background-color: var(--input-bg);
+    width: 32px;
+    height: 32px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+    border-radius: 4px;
+    gap: 10px;
+}
+
+#mainContainer #cardInformationSection {
+    width: 100%;
+    display: flex;
+    gap: 40px;
+    margin-bottom: 48px;
+    perspective: 1000px;
+}
+
+#mainContainer #cardInformationSection .informationContainer {
+    width: 50%;
+    color: var(--gray-text);
+    padding: 32px;
+    display: grid;
+    gap: 40px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+        "number number"
+        "name name"
+        "validity cvv";
+}
+
+#mainContainer #cardInformationSection .informationContainer label {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+#mainContainer #cardInformationSection .informationContainer input {
+    background-color: var(--input-bg);
+    font-size: 16px;
+    font-weight: 400;
+    padding: 10px 0 10px 10px;
+    border-radius: 4px;
+    flex: 1 0 0;
+    border: none;
+
+}
+
+#cardNumber::placeholder {
+    font-family: "IBM Plex Mono", sans-serif;
+}
+
+.cardNumberContainer {
+    grid-area: number;
+    display: flex;
+    flex-direction: column;
+}
+
+.cardNamecontainer {
+    grid-area: name;
+    display: flex;
+    flex-direction: column;
+}
+
+.cardValidityContainer {
+    grid-area: validity;
+    display: flex;
+    flex-direction: column;
+}
+
+.cardCvvContainer {
+    grid-area: cvv;
+    display: flex;
+    flex-direction: column;
+}
+
+.cardContainer {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    position: relative;
+}
+
+.cardContainer:hover{
+    transform: rotateY(180deg);
+
+}
+
+.frontCard, .backCard{
+    position: absolute;
+    backface-visibility: hidden;
+    
+}
+
+
+.frontCard {
+    width: 500px;
+    height: 280px;
+    padding: 24px;
+    gap: 10px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--card-bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.backCard{
+    transform: rotateY(180deg);
+    width: 500px;
+    height: 280px;
+    padding: 24px;
+    gap: 10px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--card-bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: end;
+}
+
+.backCard span{
+    width: 448px;
+    height: 40px;
+    background: var(--backcard-color);
+    border-radius: 4px;
+}
+
+.backCard #cvv{
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+}
+.backCard #bacCvvNumber{
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 65px;
+}
+
+.backCard img{
+    width: 36px;
+    height: 40px;
+}
+
+
+
+#mainContainer #cardInformationSection .cardContainer .frontCard .ballebankCardLogo {
+
+    display: flex;
+    align-self: flex-end;   
+}
+
+#mainContainer #cardInformationSection .cardContainer .frontCard .ballebankCardLogo h2 {
+    font-family: "Teko", sans-serif;
+    font-size: 48px;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: normal;
+    letter-spacing: -0.958px;
+    font-style: normal;
+
+    
+}
+
+#mainContainer #cardInformationSection .cardContainer .frontCard .ballebankCardLogo img {
+    width: 18px;
+    height: 20px;
+}
+
+#mainContainer #cardInformationSection .cardContainer .frontCard .ballebankCardInformations p{
+    margin-bottom: 10px;
+}
+
+#mainContainer #cardInformationSection .cardContainer .frontCard .ballebankCardInformations #frontCardNumber{
+    font-size: 24px;
+    font-weight: 700;
+}
+
+#mainContainer #cardInformationSection .cardContainer .frontCard .ballebankCardInformations #frontCardValidityText{
+    font-size: 12px;
+    font-weight: 400;
+}
+
+#mainContainer #cardInformationSection .cardContainer .frontCard .ballebankCardInformations #frontCardValidity{
+    font-weight: 700;
+}
+
+#mainContainer #buttonCta button{
+    background-color: var(--button-bg);
+    color: var(--white-text);
+    height: 41px;
+    padding: 8px 48px;
+    border-radius: 4px;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+}

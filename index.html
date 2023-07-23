@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Ballebank</title>
+</head>
+
+<body>
+    <main id="mainContainer">
+        <section id="titleSection">
+            <div class="textTitle">
+                <h1>Ballebank</h1>
+                <p>Guarde seus cartões de forma segura.</p>
+            </div>
+            <div class="imgTitle">
+                <a href="#"><img src="assets/GithubLogo.svg" alt="Github Logo"></a>
+            </div>
+        </section>
+
+        <section id="cardInformationSection">
+            <div class="informationContainer">
+                <div class="cardNumberContainer">
+                    <label for="cardNumber">Número do Cartão</label>
+                    <input placeholder="1234123412341234" type="text" name="Numero do Cartão" id="cardNumber">
+                </div>
+                <div class="cardNamecontainer">
+                    <label for="cardName">Nome do Titular</label>
+                    <input placeholder="Leonardo di Ser Piero da Vinci" type="text" name="Nome do Titular"
+                        id="cardName">
+                </div>
+                <div class="cardValidityContainer">
+                    <label for="cardValidity">Validade</label>
+                    <input placeholder="01/42" type="text" name="Validade" id="cardValidity">
+                </div>
+                <div class="cardCvvContainer">
+                    <label for="cardCvv">CVV</label>
+                    <input placeholder="123" type="text" name="CVV" id="cardCvv">
+                </div>
+            </div>
+            <div class="cardContainer">
+                <div class="frontCard">
+                    <div class="ballebankCardLogo">
+                        <h2>Ballebank</h2>
+                        <img src="assets/Group.svg" alt="discord logo">
+                    </div>
+                    <div class="ballebankCardInformations">
+                        <p id="frontCardNumber">1234123412341234</p>
+                        <p id="frontCardName">Leonardo di Ser Piero da Vinci</p>
+                        <p id="frontCardValidityText">Válido até</p>
+                        <p id="frontCardValidity">1/42</p>
+                    </div>
+                </div>
+                <div class="backCard">
+                    <span></span>
+                    <p id="cvv">CVV</p>
+                    <p id="bacCvvNumber">123</p>
+                    <img src="assets/Group.svg" alt="discord logo">
+                </div>
+            </div>
+        </section>
+
+        <section id="buttonCta">
+            <button>Cadastrar Cartão</button>
+        </section>
+    </main>
+</body>
+
+</html>
