@@ -148,10 +148,6 @@ body {
     position: relative;
 }
 
-.cardContainer:hover{
-    transform: rotateY(180deg);
-
-}
 
 .frontCard, .backCard{
     position: absolute;

@@ -24,20 +24,20 @@
             <div class="informationContainer">
                 <div class="cardNumberContainer">
                     <label for="cardNumber">Número do Cartão</label>
-                    <input placeholder="1234123412341234" type="text" name="Numero do Cartão" id="cardNumber">
+                    <input  onClick="typeInformation('cardNumber', 'frontCardNumber')" placeholder="1234123412341234" type="text" name="Numero do Cartão" id="cardNumber">
                 </div>
                 <div class="cardNamecontainer">
                     <label for="cardName">Nome do Titular</label>
-                    <input placeholder="Leonardo di Ser Piero da Vinci" type="text" name="Nome do Titular"
+                    <input onClick="typeInformation('cardName', 'frontCardName')" placeholder="Leonardo di Ser Piero da Vinci" type="text" name="Nome do Titular"
                         id="cardName">
                 </div>
                 <div class="cardValidityContainer">
                     <label for="cardValidity">Validade</label>
-                    <input placeholder="01/42" type="text" name="Validade" id="cardValidity">
+                    <input onClick="typeInformation('cardValidity', 'frontCardValidity')" placeholder="01/42" type="text" name="Validade" id="cardValidity">
                 </div>
                 <div class="cardCvvContainer">
                     <label for="cardCvv">CVV</label>
-                    <input placeholder="123" type="text" name="CVV" id="cardCvv">
+                    <input onClick="typeInformation('cardCvv', 'bacCvvNumber')" placeholder="123" type="text" name="CVV" id="cardCvv">
                 </div>
             </div>
             <div class="cardContainer">
@@ -66,6 +66,8 @@
             <button>Cadastrar Cartão</button>
         </section>
     </main>
+
+    <script src="index.js"></script>
 </body>
 
 </html>
