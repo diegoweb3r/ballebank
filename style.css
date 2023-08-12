@@ -167,6 +167,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: end;
+    position: relative;
 }
 
 .backCard{
@@ -208,11 +209,12 @@ body {
 }
 
 
-
 #mainContainer #cardInformationSection .cardContainer .frontCard .ballebankCardLogo {
-
     display: flex;
-    align-self: flex-end;   
+    align-self: flex-end;  
+    position: absolute;
+    top: 50px;
+    border:  1px solid red;
 }
 
 #mainContainer #cardInformationSection .cardContainer .frontCard .ballebankCardLogo h2 {
@@ -223,31 +225,42 @@ body {
     line-height: normal;
     letter-spacing: -0.958px;
     font-style: normal;
-
-    
+    border:  1px solid red;
 }
 
 #mainContainer #cardInformationSection .cardContainer .frontCard .ballebankCardLogo img {
     width: 18px;
     height: 20px;
+    border:  1px solid red;
 }
 
 #mainContainer #cardInformationSection .cardContainer .frontCard .ballebankCardInformations p{
     margin-bottom: 10px;
 }
 
-#mainContainer #cardInformationSection .cardContainer .frontCard .ballebankCardInformations #frontCardNumber{
+#frontCardNumber{
     font-size: 24px;
     font-weight: 700;
+    position: absolute;
+    top: 135px;
+}
+
+#frontCardName{
+    position: absolute;
+    top: 175px;
 }
 
 #mainContainer #cardInformationSection .cardContainer .frontCard .ballebankCardInformations #frontCardValidityText{
     font-size: 12px;
     font-weight: 400;
+    position: absolute;
+    top: 205px;
 }
 
 #mainContainer #cardInformationSection .cardContainer .frontCard .ballebankCardInformations #frontCardValidity{
     font-weight: 700;
+    position: absolute;
+    top: 235px;
 }
 
 #mainContainer #buttonCta button{

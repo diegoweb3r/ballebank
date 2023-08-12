@@ -1,7 +1,8 @@
 const card = document.querySelector(".cardContainer");
 const cvvButton = document.getElementById("cardCvv");
-const inputCardNumber = document.getElementById("cardNumber");
-const  frontCardNumberInfo = document.getElementById("frontCardNumber");
+let frontInfo = document.getElementById('frontCardNumber');
+let inputnumber = document.getElementById('cardNumber');
+
 
 function rotateCard() {
     card.style.transform = "rotateY(180deg)";
@@ -17,8 +18,7 @@ cvvButton.addEventListener('blur', revertRotation);
 
 
 function typeInformation(input, cardInfos){
-    let cardInformation = document.getElementById(input).value;
     const  frontCardInfo = document.getElementById(cardInfos);
-    frontCardInfo.textContent = cardInformation;
+    let cardInformation = document.getElementById(input);
+    frontCardInfo.textContent = cardInformation.value;
 }
-
