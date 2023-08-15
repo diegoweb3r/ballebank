@@ -183,6 +183,7 @@ body {
     flex-direction: column;
     justify-content: start;
     align-items: end;
+    
 }
 
 .backCard span{
@@ -206,6 +207,8 @@ body {
 .backCard img{
     width: 36px;
     height: 40px;
+    position: absolute;
+    bottom: 25px
 }
 
 
@@ -272,4 +275,8 @@ body {
     border: none;
     font-size: 14px;
     font-weight: 600;
+}
+
+#mainContainer #buttonCta button:hover{
+    cursor: pointer;
 }
